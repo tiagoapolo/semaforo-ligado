@@ -157,20 +157,10 @@ app.get('/', (req, res) => {
             '  </tr>'+
             '  <tr>'+
             '    <td>'+ xHorizontal +'</td>'+
-            '  </tr>'+
-            '  <tr>'+
             '    <td>'+ obj['h']['p'] +'</td>'+
-            '  </tr>'+
-            '  <tr>'+
             '    <td>'+ obj['v']['q'] +'</td>'+
-            '  </tr>'+
-            '  <tr>'+
             '    <td>'+ date +'</td>'+
-            '  </tr>'+
-            '  <tr>'+
             '    <td>'+ kParam +'</td>'+
-            '  </tr>'+
-            '  <tr>'+
             '    <td>'+ modeMaster +'</td>'+
             '  </tr>'+
             '</table>'+
