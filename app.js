@@ -154,7 +154,7 @@ app.post('/', function (req, res) {
 })
 
 app.get('/', (req, res) => {
-    res.json({
+    res.send({
         xHorizontal: xHorizontal,
         obj: obj,
         date: date,
