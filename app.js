@@ -60,10 +60,8 @@ function adjustTime() {
     });
 }
 
-setInterval(applyWatchError, 1000)
-setInterval(adjustTime, kParam ? kParam*60000 : 6*60000)
 
-setInterval(() => { 
+function evaluateX(){
 
     xHorizontal = (obj['h']['p']) / (obj['h']['p'] + obj['v']['q'])
 
@@ -125,18 +123,12 @@ setInterval(() => {
         console.log('nenhum modo selecionado!')
         console.log(' -------------------------- \n\n')
     }
-
-}, 6*60000)
-
-// setInterval(() => {
+}
 
 
-
-
-
-// }, 120000)
-
-
+setInterval(applyWatchError, 1000)
+setInterval(adjustTime, kParam ? kParam*60000 : 6*60000)
+setInterval(evaluateX, 6*60000)
 
 app.get('/', (req, res) => {
 
@@ -185,6 +177,10 @@ app.post('/', function (req, res) {
     // console.log('VAL: ', (obj['h']['p']) / (obj['h']['p'] + obj['v']['q']))
     console.log('POSTED: ', obj)
     console.log('---- END DEBUG ----')
+
+    if(modeMaster === 0 && obj["h"]["p"] > 0 && obj["v"]["q"] > 0){
+        evaluateX()
+    }
 
     res.send('ok')
 });
