@@ -153,4 +153,14 @@ app.post('/', function (req, res) {
     res.send('ok')
 })
 
+app.get('/', (req, res) => {
+    res.json({
+        xHorizontal: xHorizontal,
+        obj: obj,
+        date: date,
+        kParam: kParam,
+        modeMaster: modeMaster
+    })
+})
+
 app.listen(8085);
