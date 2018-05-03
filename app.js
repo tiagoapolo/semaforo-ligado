@@ -147,7 +147,7 @@ app.get('/', (req, res) => {
             '<h2>Semaforo</h2>'+
             ''+
             '<table style="width:100%">'+
-            '  <tr>'+
+            '  <tr style=\"text-align: center;\">'+
             '    <th>Valor de X</th>'+
             '    <th>Valor de P</th> '+
             '    <th>Valor de Q</th>'+
