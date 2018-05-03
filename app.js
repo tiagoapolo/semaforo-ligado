@@ -147,7 +147,7 @@ app.get('/', (req, res) => {
             '<h2>Semaforo</h2>'+
             ''+
             '<table style="width:100%">'+
-            '  <tr style=\"text-align: center;\">'+
+            '  <tr>'+
             '    <th>Valor de X</th>'+
             '    <th>Valor de P</th> '+
             '    <th>Valor de Q</th>'+
@@ -155,7 +155,7 @@ app.get('/', (req, res) => {
             '    <th>Parametro</th>'+
             '    <th>Modo de Operação</th>'+
             '  </tr>'+
-            '  <tr>'+
+            '  <tr style=\"text-align: center;\">'+
             '    <td>'+ xHorizontal +'</td>'+
             '    <td>'+ obj['h']['p'] +'</td>'+
             '    <td>'+ obj['v']['q'] +'</td>'+
