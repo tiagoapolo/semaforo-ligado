@@ -159,14 +159,14 @@ app.post('/', function (req, res) {
     else if (req.body.t === 'v')
         obj[req.body.t]["q"] = parseFloat(req.body.q)
 
-    // console.log('---- DEBUG ----')
+    console.log('---- DEBUG ----')
     // console.log('XL :' , xHorizontal)
     // console.log('VAL: ', (obj['h']['p']) / (obj['h']['p'] + obj['v']['q']))
-    // console.log('REQ: ', obj)
-    // console.log('---- END DEBUG ----')
+    console.log('POSTED: ', obj)
+    console.log('---- END DEBUG ----')
 
     res.send('ok')
 });
 
 
-app.listen(8081);
+app.listen(process.env.PORT || 5000)
