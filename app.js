@@ -166,7 +166,7 @@ app.get('/', (req, res) => {
 
 app.post('/kparameter', function (req, res) {
     
-    if(req.body.k) kParam = k
+    if(req.body.k && req.body.k ) kParam = parseInt(req.body.k) || 6
 
     res.send('ok')
 });
