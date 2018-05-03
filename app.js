@@ -137,6 +137,21 @@ setInterval(() => {
 // }, 120000)
 
 
+
+app.get('/', (req, res) => {
+
+    let o = JSON.stringify({
+        xHorizontal: xHorizontal,
+        obj: obj,
+        date: date,
+        kParam: kParam,
+        modeMaster: modeMaster
+    })
+
+    res.send(o)
+})
+
+
 app.post('/', function (req, res) {
     
     if(req.body.t === 'h') 
@@ -151,16 +166,7 @@ app.post('/', function (req, res) {
     // console.log('---- END DEBUG ----')
 
     res.send('ok')
-})
+});
 
-app.get('/', (req, res) => {
-    res.send({
-        xHorizontal: xHorizontal,
-        obj: obj,
-        date: date,
-        kParam: kParam,
-        modeMaster: modeMaster
-    })
-})
 
 app.listen(8081);
