@@ -164,6 +164,13 @@ app.get('/', (req, res) => {
     res.send(text)
 })
 
+app.post('/kparameter', function (req, res) {
+    
+    if(req.body.k) kParam = k
+
+    res.send('ok')
+});
+
 
 app.post('/', function (req, res) {
     
