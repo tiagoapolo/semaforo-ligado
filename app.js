@@ -140,15 +140,46 @@ setInterval(() => {
 
 app.get('/', (req, res) => {
 
-    let o = JSON.stringify({
-        xHorizontal: xHorizontal,
-        obj: obj,
-        date: date,
-        kParam: kParam,
-        modeMaster: modeMaster
-    })
+    let text = '<!DOCTYPE html>'+
+            '<html>'+
+            '<body>'+
+            ''+
+            '<h2>Semaforo</h2>'+
+            ''+
+            '<table style="width:100%">'+
+            '  <tr>'+
+            '    <th>Valor de X</th>'+
+            '    <th>Valor de P</th> '+
+            '    <th>Valor de Q</th>'+
+            '    <th>Data</th>'+
+            '    <th>Parametro</th>'+
+            '    <th>Modo de Operação</th>'+
+            '  </tr>'+
+            '  <tr>'+
+            '    <td>'+ xHorizontal +'</td>'+
+            '  </tr>'+
+            '  <tr>'+
+            '    <td>'+ obj['h']['p'] +'</td>'+
+            '  </tr>'+
+            '  <tr>'+
+            '    <td>'+ obj['v']['q'] +'</td>'+
+            '  </tr>'+
+            '  <tr>'+
+            '    <td>'+ date +'</td>'+
+            '  </tr>'+
+            '  <tr>'+
+            '    <td>'+ kParam +'</td>'+
+            '  </tr>'+
+            '  <tr>'+
+            '    <td>'+ modeMaster +'</td>'+
+            '  </tr>'+
+            '</table>'+
+            ''+
+            '</body>'+
+            '</html>';
 
-    res.send(o)
+
+    res.send(text)
 })
 
 
